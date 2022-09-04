@@ -125,6 +125,7 @@
                     'CallBack': '',
                 }
             }
+            gtag("purchase", "ecommerce", $("#name").val(), $("#Amount").val())
             console.log("donation submited: ", data)
             PostNedarim(data)
         }
