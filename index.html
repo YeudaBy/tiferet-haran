@@ -5,11 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="description" content="כולל תפארת הר״ן בקרית הרצוג">
+    <meta name="keywords" content="תפארת הר״ן, תפארת הרן, כולל הרן, כולל הר״ן, כולל, עמותה, קרית הרצוג, בני ברק, אברכים, צדקה, תרומה, נדרים פלוס, קהילות">
+    <meta name="author" content="Yeuda Borodyanski">
+    <link rel="icon" href="/assets/לוגו תפארת הרן כהה-ברעם.png" />
     <title>תפארת הר״ן</title>
     <link rel="stylesheet" href="/css/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <description>
+
+    </description>
+
+    <meta property="og:title" content="תפארת הר״ן" />
+    <meta property="og:url" content="https://tiferet-haran.org/" />
+    <meta property="og:image" content="/assets/לוגו תפארת הרן כהה-ברעם.png" />
+    <meta property="og:description" content="כולל תפארת הר״ן בקרית הרצוג" />
 
 
 
@@ -33,6 +47,8 @@
 
                 $("form").submit(e => {
                     e.preventDefault();
+                    document.querySelectorAll(".msg").forEach(e => e.style.display = "none")
+                    $("input[type=submit]").prop('disabled', true);
                     PayBtClick();
                 });
             });
@@ -217,11 +233,11 @@
                 <img src="/assets/9-16-2.jpeg" alt="" />
             </div>
 
-            <div class="img-wrapper" data-caption="הרב ניסים קרליץ בביקור">
+            <div class="img-wrapper" data-caption=" הרב ניסים קרליץ זצוק״ל בביקור בכולל">
                 <img src="/assets/reb-nisim.jpeg" alt="הרב ניסים קרליץ בביקור" />
             </div>
 
-            <div class="img-wrapper" data-caption="שיעור מהרב יעקב הלל">
+            <div class="img-wrapper" data-caption="שיעור מהגאון הרב יעקב הלל שליט״א">
                 <img src="/assets/sihur-harav-hilel.jpeg" alt="שיעור מהרב יעקב הלל" />
             </div>
 
@@ -236,9 +252,18 @@
         <h5>תרמו עכשיו!</h5>
 
         <a href="https://www.matara.pro/nedarimplus/online/?mosad=7000659" target="_blank">
-            לתרומה דרך נדרים פלוס
-            <span>&#8689;</span>
+            <h4>
+                לתרומה דרך נדרים פלוס
+                <span>&#8689;</span>
+            </h4>
         </a>
+
+        <div class="pushcoins">
+            <a href="https://pushcoins.org/synagogue/292" target="_blank">
+                <img src="https://www.pushcoins.org/wp-content/uploads/2021/10/Kupa.png" alt="פושקוינס לוגו" />
+                <h4>לתרומה דרך קופת ״פושקוינס״</h6>
+            </a>
+        </div>
 
         <div>
 
@@ -256,32 +281,32 @@
 
 
                 <br />
-                <p>אנא בחר את סוג התרומה:</p>
+                <p>אנא בחרו את סוג התרומה:</p>
                 <div class="options">
-                    <input type="radio" id="regular" name="PaymentType" value="Ragil" checked="checked">
+                    <input type="radio" id="regular" name="PaymentType" value="Ragil">
                     <label for="regular">תרומה רגילה / תשלומים</label>
                     <input type="radio" id="hk" name="PaymentType" value="HK">
                     <label for="hk">לתרומה בהוראת קבע</label>
                 </div>
 
 
-                <div id="regular-options">
+                <div id="regular-options" class="hidden">
                     <label for="Amountt">הזינו את סכום התרומה (בשקלים):</label>
                     <input type="number" id="Amount" name="Amountt" value="52" />
 
                     <br />
 
-                    <label for="Tashlumim">בחר מספר תשלומים:</label>
+                    <label for="Tashlumim">בחרו מספר תשלומים:</label>
                     <input type="number" id="Tashlumim" name="Tashlumim" value="1">
                 </div>
 
 
-                <div id="hk-options">
+                <div id="hk-options" class="hidden">
                     <label for="Amountt">הזינו את סכום התרומה החודשית (בשקלים):</label>
                     <input type="number" id="Amount" name="Amountt" value="52" />
                     <br />
 
-                    <label for="Tashlumim">הזינו את מספר החודשים לחיוב (לתרומה ללא הגבלה, ניתו להשאיר ריק)</label>
+                    <label for="Tashlumim">הזינו את מספר החודשים לחיוב (לתרומה ללא הגבלה, ניתן להשאיר ריק):</label>
                     <input type="number" id="Tashlumim" name="Tashlumim">
                 </div>
 
@@ -311,9 +336,9 @@
 
             </form>
 
-
-
         </div>
+
+
     </section>
 
 
@@ -364,7 +389,7 @@
 
         <div class="credit">
             Build and designed by <span>
-                <a>Yeuda By</a>
+                <a href="mailto:yeudaBorodyanski@gmail.com">Yeuda Borodyanski</a>
             </span>
         </div>
         </section>
@@ -378,7 +403,7 @@
 
         <script>
             ScrollOut({
-               });
+            });
         </script>
 </body>
 
