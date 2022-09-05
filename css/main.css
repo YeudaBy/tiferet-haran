@@ -429,6 +429,7 @@ h5 {
   text-decoration: none;
   font-weight: 600;
   border-bottom: white 1px solid;
+  text-transform: lowercase;
 }
 #contact .row .right {
   height: 80%;
