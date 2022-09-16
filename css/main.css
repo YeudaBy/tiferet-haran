@@ -675,17 +675,19 @@ button.splide__arrow.splide__arrow--prev {
 }
 
 .letter {
-  max-width: 70%;
   position: relative;
   z-index: 1;
   color: black;
   min-height: 60vh;
-  margin: auto;
+  margin: auto -30px;
+  overflow: hidden;
 }
 .letter p {
   font-weight: 400;
+  max-width: 70%;
   -webkit-backdrop-filter: brightness(0.9) blur(10px);
           backdrop-filter: brightness(0.9) blur(10px);
+  margin: 1em auto;
 }
 .letter h6 {
   -webkit-backdrop-filter: brightness(1.1);
@@ -712,7 +714,7 @@ button.splide__arrow.splide__arrow--prev {
   background-image: url("/assets/מכתב מהרבנים.png");
   top: 0;
   left: 0;
-  transform: rotate(-20deg) translate(-30%, -20%);
+  transform: rotate(-20deg) translate(0%, 20%);
   height: 400px;
   width: 300px;
   background-repeat: no-repeat;
